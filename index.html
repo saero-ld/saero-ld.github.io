@@ -91,6 +91,29 @@
         }
         footer span { color: #888; }
     </style>
+
+     .slider-container::-webkit-scrollbar { display: none; }
+        .slider-container:active { cursor: grabbing; } 
+
+        .slider-track { display: flex; gap: 20px; padding-bottom: 10px; }
+        
+        .slide {
+            min-width: 280px; 
+            width: 45%;       
+            height: 220px;    
+            flex-shrink: 0;   
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            pointer-events: none; 
+        }
+    </style>
 </head>
 <body>
 
