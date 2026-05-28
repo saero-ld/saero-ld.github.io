@@ -48,6 +48,39 @@
 
         footer { background: #000; padding: 50px 20px; text-align: center; color: #666; font-size: 14px; }
         footer span { color: #888; }
+
+        .slider-container {
+            width: 100%;
+            overflow-x: auto; 
+            cursor: grab;     
+            margin-top: 40px;
+            margin-bottom: 10px;
+            user-select: none; 
+            -webkit-overflow-scrolling: touch; 
+            scrollbar-width: none;  
+            -ms-overflow-style: none;  
+        }
+        .slider-container::-webkit-scrollbar { display: none; }
+        .slider-container:active { cursor: grabbing; } 
+
+        .slider-track { display: flex; gap: 20px; padding-bottom: 10px; }
+        
+        .slide {
+            min-width: 280px; 
+            width: 45%;       
+            height: 220px;    
+            flex-shrink: 0;   
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            pointer-events: none; 
+        }
     </style>
 </head>
 <body>
@@ -108,6 +141,29 @@
                 <td>Yamaha Grand Piano (C3)<br>Pearl Reference Drum Set<br>다양한 기타/베이스 앰프 및 신디사이저</td>
             </tr>
         </table>
+
+        <h3 style="margin-top: 60px;">Studio Gallery</h3>
+        <div class="slider-container" id="sliderContainer">
+            <div class="slider-track">
+                <div class="slide"><img src="photo1.jpg" alt="스튜디오 전경 1"></div>
+                <div class="slide"><img src="photo2.jpg" alt="스튜디오 전경 2"></div>
+                <div class="slide"><img src="photo3.jpg" alt="스튜디오 전경 3"></div>
+                <div class="slide"><img src="photo4.jpg" alt="스튜디오 전경 4"></div>
+                <div class="slide"><img src="photo5.jpg" alt="스튜디오 전경 5"></div>
+                <div class="slide"><img src="photo6.jpg" alt="스튜디오 전경 6"></div>
+                <div class="slide"><img src="photo7.jpg" alt="스튜디오 전경 7"></div>
+                <div class="slide"><img src="photo8.jpg" alt="스튜디오 전경 8"></div>
+                <div class="slide"><img src="photo9.jpg" alt="스튜디오 전경 9"></div>
+                <div class="slide"><img src="photo10.jpg" alt="스튜디오 전경 10"></div>
+                <div class="slide"><img src="photo11.jpg" alt="스튜디오 전경 11"></div>
+                <div class="slide"><img src="photo12.jpg" alt="스튜디오 전경 12"></div>
+                <div class="slide"><img src="photo13.jpg" alt="스튜디오 전경 13"></div>
+                <div class="slide"><img src="photo14.jpg" alt="스튜디오 전경 14"></div>
+                <div class="slide"><img src="photo15.jpg" alt="스튜디오 전경 15"></div>
+            </div>
+        </div>
+        <p style="text-align: center; color: #666; font-size: 13px; margin-top: 5px; letter-spacing: 0.5px;">➔ 좌우로 드래그하거나 스와이프하여 스튜디오 전경을 확인하세요.</p>
+
     </div>
 
     <footer>
@@ -132,5 +188,15 @@
         </p>
     </footer>
 
-</body>
-</html>
+    <script>
+        const slider = document.getElementById('sliderContainer');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => { isDown
