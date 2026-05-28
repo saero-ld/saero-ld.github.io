@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Equipment - NodeRo studio</title>
+
+    <link rel="icon" href="logo.png">
+    
+    <style>
+        body { margin: 0; font-family: 'Pretendard', 'Noto Sans KR', sans-serif; background-color: #111; color: #fff; line-height: 1.6; }
+        
+        header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 20px 50px; 
+            background: rgba(0, 0, 0, 0.8); 
+            position: fixed; 
+            width: 100%; 
+            box-sizing: border-box;
+            top: 0; 
+            z-index: 1000; 
+            backdrop-filter: blur(5px);
+        }
+        
+        .logo { font-size: 24px; font-weight: bold; color: #fff; text-decoration: none; letter-spacing: 2px; display: flex; align-items: center; gap: 12px; }
+        
+        .logo img { height: 32px; width: auto; }
+        
+        nav a { color: #ccc; text-decoration: none; margin-left: 30px; font-size: 15px; transition: color 0.3s; }
+        nav a:hover { color: #f4a261; }
+
+        .sub-hero { 
+            height: 40vh; 
+            display: flex; align-items: center; justify-content: center; 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1600&q=80') center/cover; 
+            margin-top: 70px; 
+        }
+        .sub-hero h1 { font-size: 40px; letter-spacing: 2px; color: #f4a261; }
+
+        .detail-content { max-width: 800px; margin: 60px auto 100px auto; padding: 0 20px; text-align: left; }
+        .detail-content h3 { font-size: 24px; border-left: 4px solid #f4a261; padding-left: 15px; margin-top: 50px; color: #fff; }
+        
+        .equip-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .equip-table th { text-align: left; padding: 15px; background: #222; color: #f4a261; border-bottom: 2px solid #333; width: 30%; }
+        .equip-table td { padding: 15px; border-bottom: 1px solid #333; color: #bbb; }
+
+        footer { background: #000; padding: 50px 20px; text-align: center; color: #666; font-size: 14px; }
+        footer span { color: #888; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+        <img src="logo.png" alt="NodeRo 로고">
+            NodeRo studio
+        </a>
+        <nav>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#equipment">Studio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="sub-hero">
+        <h1>Studio Equipment</h1>
+    </div>
+
+    <div class="detail-content">
+        <p style="font-size: 18px; color: #ddd; text-align: center; margin-bottom: 50px;">
+            노데로 스튜디오는 하이엔드 아웃보드와 최상급 마이크를 보유하여 어떤 장르의 작업이든 완벽한 사운드를 구현합니다.
+        </p>
+
+        <h3>Control Room Equipment</h3>
+        <table class="equip-table">
+            <tr>
+                <th>Console / Controller</th>
+                <td>Digidesign D-Command 24CH<br>Amek Tac Magnum 12CH</td>
+            </tr>
+            <tr>
+                <th>DAW</th>
+                <td>Avid Protools HD3<br>Steinberg Nuendo<br>Ableton Live 11</td>
+            </tr>
+            <tr>
+                <th>Converter & I/O</th>
+                <td>Digidesign 192 I/O<br>RME Fireface800</td>
+            </tr>
+            <tr>
+                <th>Monitoring System</th>
+                <td>Yamaha NS-10M Studio<br>Genelec 8040A</td>
+            </tr>
+        </table>
+
+        <h3>Recording Booth Equipment</h3>
+        <table class="equip-table">
+            <tr>
+                <th>Microphones</th>
+                <td>Neumann U87 Ai<br>AKG C414 XLII<br>Shure SM57 / SM58 다수 보유</td>
+            </tr>
+            <tr>
+                <th>Mic Preamps</th>
+                <td>Neve 1073 DPA<br>Universal Audio LA-610 Mk II</td>
+            </tr>
+            <tr>
+                <th>Instruments</th>
+                <td>Yamaha Grand Piano (C3)<br>Pearl Reference Drum Set<br>다양한 기타/베이스 앰프 및 신디사이저</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p style="font-size: 18px; color: #fff; margin-bottom: 20px;">NodeRo studio</p>
+        <p style="color: #bbb; line-height: 2;">
+            <span>주소 :</span> 
+            <a href="https://map.naver.com/p/entry/address/3zfoAx,2ALVwV,%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%84%B1%EB%AF%B8%EC%82%B0%EB%A1%9C32%EA%B8%B8%2020?c=19.55,0,0,0,dh서울특별시+마포구+성미산로32길+20" target="_blank" style="color: #bbb; text-decoration: underline; transition: 0.3s;" onmouseover="this.style.color='#f4a261'" onmouseout="this.style.color='#bbb'">
+                서울특별시 마포구 성미산로32길 20 지하1층 
+            </a><br>
+            
+            <span>전화 :</span> 010-9162-1048 | 
+            
+            <span>인스타그램 :</span> 
+            <a href="https://www.instagram.com/nodero_studio" target="_blank" style="color: #bbb; text-decoration: underline; transition: 0.3s;" onmouseover="this.style.color='#f4a261'" onmouseout="this.style.color='#bbb'">
+                @nodero_studio
+            </a> | 
+            
+            <span>X :</span> 
+            <a href="https://x.com/NodeRo_studio" target="_blank" style="color: #bbb; text-decoration: underline; transition: 0.3s;" onmouseover="this.style.color='#f4a261'" onmouseout="this.style.color='#bbb'">
+                @NodeRo_studio
+            </a>
+        </p>
+    </footer>
+
+</body>
+</html>
