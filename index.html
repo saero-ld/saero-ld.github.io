@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeRo studio</title>
+
+    <link rel="icon" href="logo.png">
+    
+    <style>
+        body { 
+            margin: 0; 
+            font-family: 'Pretendard', 'Noto Sans KR', sans-serif; 
+            background-color: #111; 
+            color: #fff; 
+            line-height: 1.6;
+        }
+
+        header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 20px 50px; 
+            background: rgba(0, 0, 0, 0.8); 
+            position: fixed; 
+            width: 100%; 
+            box-sizing: border-box;
+            top: 0; 
+            z-index: 1000; 
+            backdrop-filter: blur(5px);
+        }
+        
+        .logo { font-size: 24px; font-weight: bold; color: #fff; text-decoration: none; letter-spacing: 2px; display: flex; align-items: center; gap: 12px; }
+        
+        .logo img { height: 32px; width: auto; }
+        
+        nav a { color: #ccc; text-decoration: none; margin-left: 30px; font-size: 15px; transition: color 0.3s; }
+        nav a:hover { color: #f4a261; }
+
+        .hero { 
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover; 
+            text-align: center; 
+        }
+        .hero h1 { font-size: 56px; margin-bottom: 10px; letter-spacing: 3px; }
+        .hero p { font-size: 20px; color: #ddd; font-weight: 300; }
+
+        .section { padding: 100px 20px; text-align: center; max-width: 1100px; margin: 0 auto; }
+        .section h2 { font-size: 36px; margin-bottom: 50px; color: #f4a261; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .services { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
+        .service-card { 
+            background: #222; 
+            padding: 40px 30px; 
+            border-radius: 12px; 
+            width: 28%; 
+            min-width: 280px; 
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            box-sizing: border-box;
+        }
+        .service-card:hover { transform: translateY(-10px); background: #2a2a2a; }
+        .service-card h3 { font-size: 22px; margin-bottom: 15px; color: #fff; text-align: center; }
+        .service-card p { color: #bbb; font-size: 15px; word-break: keep-all; text-align: center; }
+        
+        .equipment-list { 
+            text-align: left; 
+            background: #1a1a1a; 
+            padding: 40px; 
+            border-radius: 12px;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .equipment-list p { color: #ccc; margin-bottom: 10px; font-size: 16px; }
+        .equipment-list strong { color: #fff; display: inline-block; width: 180px; }
+        .equipment-list:hover { transform: translateY(-10px); background: #222; }
+
+        footer { 
+            background: #000; 
+            padding: 50px 20px; 
+            text-align: center; 
+            color: #666; 
+            font-size: 14px; 
+        }
+        footer span { color: #888; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="NodeRo 로고">
+            NodeRo studio
+        </a>
+        <nav>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#equipment">Studio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>NodeRo studio</h1>
+        <p>현직 홍대 라이브홀 엔지니어 2인이 함께하는 레코딩 & 프로듀싱 & 라이브 컨설팅 스튜디오</p>
+    </section>
+
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <div class="services">
+            <a href="recording.html" class="service-card">
+                <h3>Recording</h3>
+                <p>보컬, 악기, 성우 등 최상의 환경에서 진행되는 프로페셔널 레코딩. 넓고 쾌적한 부스를 제공합니다.</p>
+            </a>
+
+            <a href="producing.html" class="service-card">
+                <h3>Producing & Arrange</h3>
+                <p>수많은 경험을 가진 뮤지션들의 작곡, 편곡 및 앨범 전체 프로듀싱과 MR 제작을 지원합니다.</p>
+            </a>
+
+            <a href="mixing.html" class="service-card">
+                <h3>Mixing & Mastering</h3>
+                <p>디지털 싱글부터 정규 앨범까지, 최고급 콘솔과 아웃보드를 활용한 고음질 사운드 디자인을 구현합니다.</p>
+            </a>
+        </div>
+    </section>
+
+    <section id="equipment" class="section">
+        <h2>Studio Equipment</h2>
+        <a href="equipment.html" class="equipment-list" style="text-decoration: none; color: inherit; display: block; transition: transform 0.3s ease, background 0.3s ease;">
+            <p><strong>Console & Controller</strong> | Digidesign D-Command 24CH, Amek Tac Magnum 12CH</p>
+            <p><strong>DAW (Recording)</strong> | Avid Protools HD3, Steinberg Nuendo</p>
+            <p><strong>Converter & I/O</strong> | Digidesign 192 I/O, RME Fireface800</p>
+            <p><strong>Instruments</strong> | Yamaha Grand Piano 및 드럼 셋 등 다양한 악기 보유</p>
+            <br>
+            <p style="text-align: center; color: #f4a261; margin-top: 20px;">재즈 트리오 동시 녹음 및 드럼 녹음이 가능한 쾌적하고 넓은 부스를 갖추고 있습니다.</p>
+            <p style="text-align: center; color: #888; font-size: 14px; margin-top: 15px;">클릭해서 전체 장비 목록 자세히 보기 ➔</p>
+        </a>
+    </section>
+
+    <footer>
+        <p style="font-size: 18px; color: #fff; margin-bottom: 20px;">NodeRo studio</p>
+        <p style="color: #bbb; line-height: 2;">
+            <span>주소 :</span> 
+            <a href="https://map.naver.com/p/entry/address/3zfoAx,2ALVwV,%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%84%B1%EB%AF%B8%EC%82%B0%EB%A1%9C32%EA%B8%B8%2020?c=19.55,0,0,0,dh서울특별시+마포구+성미산로32길+20" target="_blank" style="color: #bbb; text-decoration: underline; transition: 0.3s;" onmouseover="this.style.color='#f4a261'" onmouseout="this.style.color='#bbb'">
+                서울특별시 마포구 성미산로32길 20 지하1층
+            </a><br>
+            
+            <span>전화 :</span> 010-9162-1048 | 
+            
+            <span>인스타그램 :</span> 
+            <a href="https://www.instagram.com/nodero_studio" target="_blank" style="color: #bbb; text-decoration: underline; transition: 0.3s;" onmouseover="this.style.color='#f4a261'" onmouseout="this.style.color='#bbb'">
+                @nodero_studio
+            </a> | 
+            
+            <span>X :</span> 
+            <a href="https://x.com/NodeRo_studio" target="_blank" style="color: #bbb; text-decoration: underline; transition: 0.3s;" onmouseover="this.style.color='#f4a261'" onmouseout="this.style.color='#bbb'">
+                @NodeRo_studio
+            </a>
+        </p>
+    </footer>
+
+</body>
+</html>
