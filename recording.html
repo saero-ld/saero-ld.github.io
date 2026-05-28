@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recording - NodeRo studio</title>
+
+    <link rel="icon" href="logo.png">
+    
+    <style>
+        body { margin: 0; font-family: 'Pretendard', 'Noto Sans KR', sans-serif; background-color: #111; color: #fff; line-height: 1.6; }
+
+        header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 20px 50px; 
+            background: rgba(0, 0, 0, 0.8); 
+            position: fixed; 
+            width: 100%; 
+            box-sizing: border-box;
+            top: 0; 
+            z-index: 1000; 
+            backdrop-filter: blur(5px);
+        }
+
+        .logo { font-size: 24px; font-weight: bold; color: #fff; text-decoration: none; letter-spacing: 2px; display: flex; align-items: center; gap: 12px; }
+
+        .logo img { height: 32px; width: auto; }
+        
+        nav a { color: #ccc; text-decoration: none; margin-left: 30px; font-size: 15px; transition: color 0.3s; }
+        nav a:hover { color: #f4a261; }
+
+        .sub-hero { 
+            height: 40vh; 
+            display: flex; align-items: center; justify-content: center; 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1600&q=80') center/cover; 
+            margin-top: 70px; 
+        }
+        .sub-hero h1 { font-size: 40px; letter-spacing: 2px; color: #f4a261; }
+
+        .detail-content { max-width: 800px; margin: 60px auto 100px auto; padding: 0 20px; text-align: left; }
+        .detail-content h3 { font-size: 24px; border-left: 4px solid #f4a261; padding-left: 15px; margin-top: 50px; color: #fff; }
+        .detail-content p { color: #bbb; font-size: 17px; line-height: 1.8; margin-bottom: 20px; }
+
+        footer { background: #000; padding: 50px 20px; text-align: center; color: #666; font-size: 14px; }
+        footer span { color: #888; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="NodeRo 로고">
+            NodeRo studio
+        </a>
+        <nav>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#equipment">Studio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="sub-hero">
+        <h1>Recording</h1>
+    </div>
+
+    <div class="detail-content">
+        <p style="font-size: 18px; color: #ddd; text-align: center; margin-bottom: 50px;">
+            최상의 어쿠스틱 음향 설계가 반영된 부스에서 아티스트 본연의 톤을 완벽하게 담아내는 레코딩 서비스입니다.
+        </p>
+
+        <h3>Vocal & Voice Recording</h3>
+        <p>프로페셔널 콘덴서 마이크와 하이엔드 프리앰프 셋업을 통해 숨소리부터 강력한 성량까지 왜곡 없이 깨끗하게 수음합니다. 솔로 보컬, 코러스, 나레이션 등 목적에 맞는 최적의 마이크 포지셔닝을 제공합니다.</p>
+
+        <h3>Instrument & Band Session</h3>
+        <p>드럼 세트 풀 수음 및 밴드 악기 동시 녹음이 가능한 여유로운 크기의 부스를 운영합니다. 각 악기의 특성을 극대화하는 멀티 마이킹 테크닉으로 생동감 넘치는 라이브 사운드를 기록합니다.</p>
+        </div>
+
+    <footer>
+        <p style="font-size: 18px; color: #fff; margin-bottom: 20px;">NodeRo studio</p>
+        <p style="color: #bbb; line-height: 2;">
+            <span>주소 :</span> 
+            <a href="https://map.naver.com/p/entry/address/3zfoAx,2ALVwV,%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%A7%88%ED%8F%AC%EA%B5%AC%20%EC%84%B1%EB%AF%B8%EC%82%B0%EB%A1%9C32%EA%B8%B8%2020?c=19.55,0,0,0,dh서울특별시+마포구+성미산로32길+20" target="_blank" style="color: #bbb; text-decoration: underline; transition: 0.3s;" onmouseover="this.style.color='#f4a261'" onmouseout="this.style.color='#bbb'">
+                서울특별시 마포구 성미산로32길 20 지하1층
+            </a><br>
+            
+            <span>전화 :</span> 010-9162-1048 | 
+            
+            <span>인스타그램 :</span> 
+            <a href="https://www.instagram.com/nodero_studio" target="_blank" style="color: #bbb; text-decoration: underline; transition: 0.3s;" onmouseover="this.style.color='#f4a261'" onmouseout="this.style.color='#bbb'">
+                @nodero_studio
+            </a> | 
+            
+            <span>X :</span> 
+            <a href="https://x.com/NodeRo_studio" target="_blank" style="color: #bbb; text-decoration: underline; transition: 0.3s;" onmouseover="this.style.color='#f4a261'" onmouseout="this.style.color='#bbb'">
+                @NodeRo_studio
+            </a>
+        </p>
+    </footer>
+
+</body>
+</html>
